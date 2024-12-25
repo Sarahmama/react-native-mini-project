@@ -9,7 +9,6 @@ import React, { useState } from "react";
 
 const EditScreen = ({ route }) => {
   const { user } = route.params;
-  console.log(user);
 
   const [userState, setUser] = useState(user.username);
   const [phoneState, setPhone] = useState(user.phoneNumber);
@@ -57,7 +56,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: "#f2f2f2",
+    backgroundColor: "#fff",
   },
   title: {
     fontSize: 24,
@@ -90,24 +89,17 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   button: {
-    backgroundColor: "#007AFF", // Modern blue color
-    paddingVertical: 15, // Increased vertical padding
-    borderRadius: 10, // Rounded corners for the button
-    alignItems: "center", // Center the text
+    backgroundColor: "#003049",
+    paddingVertical: 15,
+    borderRadius: 10,
+    alignItems: "center",
     justifyContent: "center",
-    marginTop: 20, // Space above the button
-    shadowColor: "#000", // Subtle shadow for depth
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5, // Elevation for Android
+    marginTop: 20,
   },
   buttonText: {
-    color: "#fff", // White text color
-    fontSize: 18, // Larger font size
-    fontWeight: "bold", // Bold text
-    textTransform: "uppercase", // Uppercase text
-    letterSpacing: 1, // Slight letter spacing
+    color: "#fff",
+    fontSize: 18,
+    fontWeight: "bold",
   },
 });
 

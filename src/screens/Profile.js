@@ -31,10 +31,10 @@ const Profile = () => {
       <View style={styles.container2}>
         {/* <View> */}
 
-        <TouchableOpacity key={users[0].id} style={styles.card}>
-          <Text>Username: {users[0].username}</Text>
-          <Text>phoneNumber: {users[0].phoneNumber}</Text>
-        </TouchableOpacity>
+        <View key={users[0].id} style={styles.card}>
+          <Text style={styles.text}>Username: {users[0].username}</Text>
+          <Text style={styles.text}>phoneNumber: {users[0].phoneNumber}</Text>
+        </View>
 
         {/* </View> */}
       </View>
@@ -74,10 +74,18 @@ const styles = StyleSheet.create({
   },
   card: {
     margin: 5,
-    padding: 50,
-    backgroundColor: "#edede9",
+    padding: 20,
+    backgroundColor: "#003049",
     borderRadius: 20,
     width: "80%",
+    height: 300,
+    justifyContent: "center",
+  },
+  text: {
+    color: "#fff",
+    fontSize: 18,
+    fontWeight: "bold",
+    marginBottom: 20,
   },
 });
 
